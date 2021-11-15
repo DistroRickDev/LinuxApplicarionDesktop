@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="main_pane" fx:id="main_window_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.desktop_generator.MainWindowController">
+   <top>
+      <HBox id="menu_bar" alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="file_button" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" opacity="1" prefHeight="27.0" prefWidth="47.0" text="File" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+               <contextMenu>
+                  <ContextMenu fx:id="file_menu">
+                    <items>
+                      <MenuItem fx:id="file_menu_new_item" mnemonicParsing="false" text="New" />
+                        <MenuItem fx:id="file_menu_open_item" mnemonicParsing="false" text="Open" />
+                        <MenuItem fx:id="file_menu_about_item" mnemonicParsing="false" text="About" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </Button>
+            <Separator disable="true" opacity="0.0" prefHeight="0.0" prefWidth="470.0" HBox.hgrow="NEVER" />
+            <Button id="minimize_button" fx:id="minimize_button" mnemonicParsing="false" text="_">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button id="close_button" fx:id="close_button" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="X" onAction="#onCloseButtonClicked">
+               <HBox.margin>
+                  <Insets right="15.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+   </top>
+   <left>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Separator opacity="0.0" orientation="VERTICAL" prefHeight="236.0" prefWidth="0.0" />
+            <Label text="App Name:">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Label>
+            <Separator opacity="0.0" orientation="VERTICAL" prefHeight="194.0" prefWidth="0.0" />
+            <Label text="Executable: ">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Label>
+            <Separator opacity="0.0" orientation="VERTICAL" prefHeight="220.0" />
+            <Label prefHeight="0.0" prefWidth="32.0" text="Icon:">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Label>
+            <Separator opacity="0.0" orientation="VERTICAL" prefHeight="203.0" prefWidth="0.0" />
+            <Label text="Terminal:">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Label>
+            <Separator opacity="0.0" orientation="VERTICAL" prefHeight="187.0" prefWidth="3.0" />
+            <Label text="Comment:" />
+            <Separator opacity="0.0" orientation="VERTICAL" prefHeight="235.0" prefWidth="0.0" />
+         </children>
+      </VBox>
+   </left>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="36.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="generate_button" mnemonicParsing="false" text="Generate">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="clear_button" mnemonicParsing="false" text="Clear" />
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="appname_input">
+               <VBox.margin>
+                  <Insets bottom="15.0" right="15.0" />
+               </VBox.margin>
+            </TextField>
+            <HBox prefHeight="23.0" prefWidth="500.0">
+               <children>
+                  <TextField fx:id="exec_input" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="15.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="exec_button" mnemonicParsing="false" text="Search">
+                     <HBox.margin>
+                        <Insets left="5.0" right="15.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="500.0">
+               <children>
+                  <ImageView fx:id="icon_imageview" fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets bottom="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Button fx:id="icon_button" mnemonicParsing="false" text="Search" />
+               </children>
+            </HBox>
+            <CheckBox fx:id="termina_checkbox" mnemonicParsing="false" text="Enabled">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </CheckBox>
+            <TextField fx:id="comment_input">
+               <VBox.margin>
+                  <Insets right="15.0" />
+               </VBox.margin></TextField>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

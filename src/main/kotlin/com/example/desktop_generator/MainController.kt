@@ -5,7 +5,6 @@ import javafx.scene.control.*
 import javafx.scene.image.Image
 import javafx.scene.image.ImageView
 import javafx.stage.Stage
-import java.lang.RuntimeException
 
 class MainController() {
     private lateinit var mImageUrl: String

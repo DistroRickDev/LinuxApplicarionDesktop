@@ -1,0 +1,14 @@
+#minimize_button, #close_button, #file_button{
+    -fx-background-color: #eb001b;
+    -fx-text-fill: #fad5d4;
+    -fx-font-family: 'Open Sans', sans-serif;
+}
+
+#minimize_button:hover, #close_button:hover, #file_button:hover {
+    -fx-background-color: #670101;
+    -fx-scale-y: 1.1;
+}
+
+#menu_bar{
+    -fx-background-color: #2f5269;
+}
